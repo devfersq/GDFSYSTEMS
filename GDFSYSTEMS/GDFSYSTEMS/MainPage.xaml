@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModel="clr-namespace:GDFSYSTEMS.ViewModels"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Blanco}"
+             x:Class="GDFSYSTEMS.MainPage">
+    <ContentPage.BindingContext>
+        <viewModel:MainPageViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical" Margin="30,20">
+                        <Image Source="Logo_GFD.png"
+                       WidthRequest="300"
+                       HeightRequest="200"/>
+
+                        <StackLayout  VerticalOptions="Center" 
+                              HorizontalOptions="Center" 
+                              WidthRequest="330" 
+                              BackgroundColor="{StaticResource Blanco}" 
+                              
+                     Orientation="Horizontal">
+                            <Image Source="Usericon.png" 
+                           WidthRequest="25" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
+
+                            <Entry x:Name="User_Entry" 
+                           TextColor="{StaticResource Negro}" 
+                           Placeholder="Correo" 
+                           HeightRequest="45" 
+                           PlaceholderColor="{StaticResource Negro}" 
+                           Keyboard="Email" 
+                           FontSize="18" 
+                           HorizontalTextAlignment="Start"
+                           WidthRequest="250"
+                           Text="{Binding User_Entry, Mode=TwoWay}"
+                       />
+                        </StackLayout>
+
+                        <StackLayout BackgroundColor="{StaticResource Blanco}" 
+                             VerticalOptions="Center" 
+                             HorizontalOptions="Center" 
+                             WidthRequest="330" 
+                             Orientation="Horizontal">
+                            <Image Source="Lockicon.png" 
+                           WidthRequest="25" 
+                           HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
+
+                            <Entry x:Name="Password_Entry" 
+                           TextColor="{StaticResource Negro}" 
+                           Placeholder="Contraseña" 
+                           PlaceholderColor="{StaticResource Negro}" 
+                           IsPassword="True" 
+                           FontSize="18" 
+                           HorizontalTextAlignment="Start"
+                           WidthRequest="250"
+                           Text="{Binding Password_Entry, Mode=TwoWay}"/>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label  HorizontalOptions="CenterAndExpand" 
+                        TextColor="{StaticResource Negro}"
+                        VerticalOptions="StartAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="¿Olvidaste" />
+                                        <Span FontAttributes="Bold"
+                                  Text=" tu contraseña?">
+                                            <Span.GestureRecognizers>
+                                                <TapGestureRecognizer  />
+                                            </Span.GestureRecognizers>
+                                        </Span>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+
+                        <Button  
+                        Text="Iniciar sesión" 
+                        BorderRadius="10"
+                        BackgroundColor="{StaticResource Negro}" 
+                        TextColor="{StaticResource Blanco}" 
+                        FontSize="18" 
+                        Command="{Binding IngresarCommand}"
+                        />
+                      
+                        <Label 
+                            FontAttributes="Bold"
+                            Text="Regístrate" 
+                            Padding="10"
+                            HorizontalOptions="CenterAndExpand"
+                            TextColor="{StaticResource Negro}" 
+                            VerticalTextAlignment="Center">
+                            <!--<Label.GestureRecognizers>
+                                <TapGestureRecognizer 
+                            Command="{Binding RegistrarCommand}" />
+                            </Label.GestureRecognizers>-->
+                        </Label>
+
+                        <Label Padding="20" 
+                       FontSize="15" 
+                       HorizontalOptions="CenterAndExpand" 
+                       TextColor="{StaticResource Negro}"
+                       VerticalOptions="StartAndExpand">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Regístrate por" />
+                                    <Span FontAttributes="Bold"
+                                  Text=" Facebook">
+                                        <!--<Span.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                         Command="{Binding RegistrarHandyManCommand}"/>
+                                        </Span.GestureRecognizers>-->
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+                    </StackLayout>
+
+                </StackLayout>
+                <StackLayout  VerticalOptions="EndAndExpand">
+                    <Grid VerticalOptions="EndAndExpand">
+                        <ContentPresenter Grid.Row="0" VerticalOptions="EndAndExpand"/>
+                        <BoxView Grid.Row="1" VerticalOptions="EndAndExpand" Color="{StaticResource Azul}"/>
+                        <StackLayout Grid.Row="1" VerticalOptions="EndAndExpand" >
+                            <Label x:Name="linkfersq"
+                               Text="www.fersq.com"  
+                               FontSize="Medium" 
+                               FontAttributes="Bold"
+                               VerticalOptions="EndAndExpand" 
+                               HorizontalOptions="CenterAndExpand" 
+                               TextColor="{StaticResource Negro}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding OpenUrlCommand}" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

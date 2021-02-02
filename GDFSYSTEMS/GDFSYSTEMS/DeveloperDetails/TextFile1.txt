@@ -1,0 +1,46 @@
+﻿Este Código  es solo para el uso del destinatario y la información contenida en el mismo no refleja necesariamente la postura, 
+ideas normas o políticas del desarrollador, este mensaje puede contener información PRIVILEGIADA y/o CONFIDENCIAL o 
+incluir datos personales protegidos por las leyes aplicables. 
+
+Solicitud del Reclutador:
+Crear solución móvil utilizando Xamarin o flutter  
+Para la gestión de información conectar a una fuente de datos publica llamada {JSON} Placeholder (https://jsonplaceholder.typicode.com/) presentada información obtenida 
+Hacer uso de mapas para posicionar algún elemento y poder geolocalizar algún lugar 
+Enviar zip con solución.
+
+web api:
+https://jsonplaceholder.typicode.com/posts
+
+Arq del proyecto:
+MVVM
+
+Plugin:
+Microsoft.Net.Http
+NETStandard.Library
+Newtonsoft.Json
+System.Configuration.Configuration
+Xam.Plugin.Connectivity
+Xam.Plugin.Geolocator
+Xamarin.Essentials
+Xamarin.Forms.Maps
+Xamarin.Forms
+
+Permisos:
+Ubicacion (Solo cuando la app esta en uso).
+
+Almacenamiento:
+37.54 MB
+
+
+Informacion del dev:
+https://www.linkedin.com/in/fernandosanchez7/
+https://github.com/devfersq
+
+Correos:
+dev.fersq@gmail.com
+ing.fersq@gmail.com
+
+
+Codigo en github:
+https://github.com/devfersq/TestGDFSYSTEMS
+

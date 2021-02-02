@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\MenuHamburguesa\**" />
+    <EmbeddedResource Remove="ViewModels\MenuHamburguesa\**" />
+    <None Remove="ViewModels\MenuHamburguesa\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ViewModels\MenuDePaginasViewModel.cs" />
+    <Compile Remove="ViewModels\MenuHamburguesaViewModel.cs" />
+    <Compile Remove="ViewModels\MenuPrincipalViewModel.cs" />
+    <Compile Remove="Views\MasterPageItemView.cs" />
+    <Compile Remove="Views\MenuDePaginasView.xaml.cs" />
+    <Compile Remove="Views\MenuHamburguesaView.xaml.cs" />
+    <Compile Remove="Views\MenuHamburguesa\MasterDetailPageViewDetail.xaml.cs" />
+    <Compile Remove="Views\MenuHamburguesa\MasterDetailPageViewMaster.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="Views\MenuDePaginasView.xaml" />
+    <EmbeddedResource Remove="Views\MenuHamburguesaView.xaml" />
+    <EmbeddedResource Remove="Views\MenuHamburguesa\MasterDetailPageViewDetail.xaml" />
+    <EmbeddedResource Remove="Views\MenuHamburguesa\MasterDetailPageViewMaster.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Net.Http" Version="2.2.28" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1905" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="4.8.0.1687" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Managers\" />
+    <Folder Include="NotificationCross\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\GoogleMapsView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MenuHamburguesa\MasterDetailPageView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MiInformacionView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\WebApiView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModel="clr-namespace:GDFSYSTEMS.ViewModels"
+             x:Class="GDFSYSTEMS.Views.MiInformacionView">
+    <ContentPage.BindingContext>
+        <viewModel:MiInformacionViewModel />
+    </ContentPage.BindingContext>
+    <ContentPage.Content>
+
+        <ScrollView>
+            <StackLayout>
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label Text="{Binding TextoLabelView}"
+                           FontSize="Small"/>
+
+                </StackLayout>
+                <StackLayout  VerticalOptions="EndAndExpand">
+                    <Grid VerticalOptions="EndAndExpand">
+                        <ContentPresenter Grid.Row="0" VerticalOptions="EndAndExpand"/>
+                        <BoxView Grid.Row="1" VerticalOptions="EndAndExpand" Color="{StaticResource Azul}"/>
+                        <StackLayout Grid.Row="1" VerticalOptions="EndAndExpand" >
+                            <Label x:Name="linkfersq"
+                               Text="www.fersq.com"  
+                               FontSize="Medium" 
+                               FontAttributes="Bold"
+                               VerticalOptions="EndAndExpand" 
+                               HorizontalOptions="CenterAndExpand" 
+                               TextColor="{StaticResource Negro}">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding OpenUrlCommand}" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+            </StackLayout>
+
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>
